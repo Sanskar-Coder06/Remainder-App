@@ -1,0 +1,52 @@
+import time
+while True: #Outer Layer
+
+    while True:
+        ask_1 = input("Remainder Message: ")
+
+        if not ask_1:
+            print("Nothing Typed")
+            #Checking If The Input Is Empty Or Not
+
+        else:
+            print("Remainder Message Taken Successfully")
+            break
+
+    while True:
+        ask_2 = input("Delay: ")
+
+        if not ask_2:
+            print("No Number Typed")
+            #Checking If The Input Is Empty Or Not
+
+        elif not ask_2.isdigit():
+            print("Not a Number")
+            #Checking If The Input Is A Number Or Not
+
+        elif int(ask_2) <= 0:
+            print("Not A Positive Number")
+            #Checking If The Number Is Positive Number Or Not
+
+        else:
+            print("Delay Time Taken Successfully")
+            break
+
+    a = int(ask_2)
+    time.sleep(a)
+    #First Remainder Ends Here
+
+    while True:
+        choose = input("Do You Want To Set Another Remainder (yes/no): ").lower()
+
+        if choose == "yes":
+            break
+            #go back to outer loop
+
+        elif choose == "no":
+            print("Exited")
+            exit()
+            #completely stop program
+
+        else:
+            print("Please type yes or no")
+
